@@ -1,0 +1,464 @@
+@charset "utf-8";
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    line-height: 1;
+    color: #333;
+    font-family: 'Noto Sans KR';
+    font-weight: 300;
+}
+h3 {
+    font-size: 30px;
+}
+
+/*** 🤍header ***/
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    /* 💥올려주면 호버시 depth02도 같이 올라옴 */
+}
+header .inner {
+    height: 80px;
+    width: 1760px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: antiquewhite; */
+}
+header .inner h1 {
+    height: 100%;
+}
+header .inner h1 img {
+    width: 90px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+header .inner .hd_left {
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+header .inner .hd_left nav .gnb {
+    margin-left: 230px;
+    width: 100%;
+    display: flex;
+    line-height: 80px;
+}
+header .inner .hd_left nav .gnb > li {
+    margin-right: 50px;
+    position: relative;
+    font-weight: 300;
+}
+header .inner .hd_left nav .gnb > li img {
+    position: absolute;
+    top: 50%;
+    left: 85px;
+    transform: translateY(-50%);
+}
+header .inner .hd_left nav .gnb > li .depth02 {
+    line-height: 1.8;
+    width: 180px;
+    position: absolute;
+    top: 80px;
+    left: -50px;
+    text-align: center;
+    display: none;
+    border: 1px solid #797979;
+    
+}
+header .inner .hd_left nav .gnb > li .depth02 li {
+    padding: 5px 0;
+}
+header .inner .hd_left nav .gnb > li:hover .depth02 {
+    display: block;
+    background-color: #fff;
+}
+header .inner .hd_left nav .gnb > li .depth02 li:hover {
+    background-color: #333;
+    color: #fff;
+}
+header .inner .menu {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+header .inner .menu li {
+    display: inline-block;
+    margin-left: 20px;
+}
+header .inner .menu li img {
+    height: 20px;
+    object-fit: cover;
+}
+header .inner .menu li:first-child img {
+    height: 23px;
+}
+header .inner .hd_left .gnb {
+    position: relative;
+}
+header .inner .hd_left .gnb li:first-child:before {
+    content: '';
+    display: block;
+    background-image: url(../img/icon/icons8-화살표-축소-16-아래쪽.png);
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 85px;
+    transform: translateY(-50%);
+    display: none;
+}
+header .inner .hd_left .gnb li:first-child:hover::before {
+    display: block;
+}
+header .inner .hd_left .gnb li:first-child:hover img {
+    display: none;
+}
+
+/*** 🤍.main_visual ***/
+.main_visual {
+    padding-top: 80px;
+    width: 100%;
+    height: 783px;
+    position: relative;
+    /* 💥z-index: ; 적용하면 위에 p태그 링크가 안걸림 
+    적용시 뒤로 보내기 보다 앞으로 올릴 태그에 적용하기 */
+}
+.main_visual video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.main_visual div {
+    color: #fff;
+    text-align: center;
+}
+.main_visual div h4 {
+    font-family: 'Lora', serif;
+    font-size: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+.main_visual div p {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+}
+
+/*** 🤍.cont01 ***/
+.cont01 {
+    width: 1440px;
+    margin: 160px auto;
+    /* background-color: antiquewhite; */
+}
+.cont01 .text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.cont01 p {
+    border-bottom: 1px solid #333; 
+}
+.cont01 .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont01 .list .item {
+    width: 342px;
+}
+.cont01 .list .item figure {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 50px;
+}
+.cont01 .list .item figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont01 .list .item h4 {
+    text-align: center;
+    font-weight: 400;
+}
+.cont01 .list .item:hover h4 {
+    text-decoration: underline;
+}
+.cont01 .list .item span {
+    color: #555555;
+    text-align: center;
+    display: block;
+    margin: 25px 0 20px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.cont01 .list .item .color {
+    text-align: center;
+}
+.cont01 .list .item .color li {
+    display: inline-block;
+}
+.cont01 .list .item .color li img {
+    width: 18px;
+    object-fit: cover;
+}
+
+/*** 🤍.cont02 ***/
+.cont02 {
+    width: 1440px;
+    margin: 160px auto;
+}
+.cont02 .text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.cont02 .text p {
+    border-bottom: 1px solid #333;
+}
+.cont02 .list .item_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.cont02 .list ul:nth-child(1) {
+    margin-bottom: 21px;
+}
+.cont02  .list .item {
+    position: relative;
+}
+.cont02 .list .item .hv_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.8s;
+}
+.cont02 .list .item .hv_1 img {
+    height: 100%;
+    object-fit: cover;
+}
+.cont02 .list .item .hover_item {
+    background-color: #fff;
+    width: 467px;
+    height: 404px;
+    border: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    opacity: 0;
+    transition: 0.8s;
+}
+.cont02 .list .item .hover_item h4:first-child {
+    text-align: left;
+    margin: 30px 0 0 30px;
+}
+.cont02 .list .item .hover_item h4:nth-of-type(2) {
+    font-weight: 400;
+}
+.cont02 .list .item .hover_item img {
+    width: 340px;
+    height: 180px;
+    object-fit: cover;
+    margin: 30px 0;
+}
+.cont02 .list .item .hover_item p {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+.cont02 .list .item:nth-child(2) .hover_item,
+.cont02 .list .item:nth-child(4) .hover_item {
+    background-color: #e2e2e2;
+}
+.cont02 .list .item:hover .hover_item,
+.cont02 .list .item:hover .hv_1 {
+    opacity: 1;
+}
+
+/*** 🤍.cont03 ***/
+.cont03 {
+    width: 1440px;
+    margin: 160px auto;
+}
+.cont03 .news {
+    margin: 160px 0;
+}
+.cont03 .news .text {
+    display: flex;
+    justify-content: space-between;
+    border: 0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.cont03 .news .text p {
+    border-bottom: 1px solid #333;
+}
+.cont03 .news a div {
+    display: flex;
+    padding: 30px 0;
+    border-top: 1px solid #333;
+    position: relative;
+    /* 💥 a 안에 div모두 기준으로 가상선택자 absolute하면
+    가상선택자 두개 모두 한번에 적용 가능 */
+}
+.cont03 .news a:last-child div {
+    border-bottom: 1px solid #333;
+}
+.cont03 .news div span {
+    margin-right: 30px;
+}
+.cont03 .news a div p:nth-of-type(1) {
+    width: 120px;
+    margin-right: 80px;
+}
+.cont03 .news a div p:nth-of-type(2):hover {
+    text-decoration: underline;
+}
+.cont03 .news > a div::before {
+    content: '';
+    display: block;
+    background-image: url(../img/icon/icons8-arrows-24.png);
+    width: 20px;
+    height: 20px;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    /* 💥가상선택자 before과 after 앞뒤 잡는거 position 쓰면 별 효과 없어짐 */
+}
+.cont03 a div figure {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    z-index: -1;
+}
+.cont03 a div figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cont03 a div figure p {
+    color: #fff;
+    font-size: 20px;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.8s;
+}
+.cont03 div:hover figure p {
+    opacity: 1;
+}
+
+/*** 🤍.cont04 ***/
+.cont04 {
+    width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 160px;
+    border-bottom: 1px solid #333;
+
+}
+.cont04 .text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.cont04 .text p {
+    border-bottom: 1px solid #333;
+}
+.cont04 .list {
+    display: flex;
+    justify-content: space-between;
+}
+.cont04 .list .item {
+    width: 462px;
+}
+.cont04 .list .item img {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+.cont04 .list .item p:nth-of-type(1) {
+    margin: 25px 0 20px;
+    color: #797979;
+}
+.cont04 .list .item p:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: 400;
+}
+.cont04 .list .item img:hover {
+    transform: scale(1.02);
+    
+}
+
+/*** 🤍footer ***/
+footer {
+    width: 1074px;
+    margin: 0 auto;
+    padding: 30px 0 80px;
+}
+footer .inner {
+    display: flex;
+    justify-content: space-between;
+}
+footer .inner h1 {
+    width: 90px;
+    
+}
+footer .inner h1 img {
+    width: 100%;
+}
+footer .inner .ul_wrap {
+    font-size: 14px;
+}
+footer .inner .ul_wrap .ul_01 {
+    margin-bottom: 50px;
+}
+footer .inner .ul_wrap .ul_01 li {
+    display: inline-block;
+    margin-right: 30px;
+}
+footer .inner .ul_wrap .ul_01 li:nth-child(5),
+footer .inner .ul_wrap .ul_01 li:last-child {
+    font-weight: 500;
+}
+footer .inner .ul_wrap .ul_02 li {
+    margin-bottom: 10px;
+}
